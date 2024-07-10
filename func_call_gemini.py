@@ -1,6 +1,6 @@
 import google.generativeai as genai
 
-genai.configure(api_key='AIzaSyB4_ihLOz77jfiZvzOh4rGAtY5ELhlPzuU')
+genai.configure(api_key='your_gemini_key')
 
 
 def find_movies(description: str, location: str = ""):
