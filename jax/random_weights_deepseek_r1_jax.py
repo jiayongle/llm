@@ -69,7 +69,7 @@ if __name__ == "__main__":
             jax.profiler.start_trace("/tmp/my_profile")
         tokens_list.append(curr_tokens)
         curr_tokens, cache = dsjax.decode_step(curr_tokens, weights, cache, cfg)
-        if i == 6:
+        if i == 31:
             jax.block_until_ready(tokens_list)
             jax.profiler.stop_trace()
     tokens = np.array(jnp.concatenate(tokens_list, axis=-1))
